@@ -84,7 +84,8 @@ table{
 						<br>
                         
 						<a href="index.php?logout='1'" style="color: red; float:right; margin-left:50px">logout</a>
-                        <a href="updatefront.php?logout='1'" style="color: red; float:right">Update</a>
+                        <a href="updatefront.php?logout='1'" style="color: red; float:right; margin-left:50px">Update</a>
+                        <a href="shortadd.php?logout='1'" style="color: red; float:right">Trainig Add</a>
 					</small>
 
 				<?php endif ?>
