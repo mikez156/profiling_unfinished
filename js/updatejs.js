@@ -30,7 +30,8 @@ $(document).on("click", "#edusubbtn", function(){
 $(document).on("click", "#deledu", function(){
     $.when( seteduiddelete() ).done(function() {
         deleteude();
-        });
+        
+        }); 
  });
 //============addd training================
  $(document).on("click", "#trnaddbtn", function(){

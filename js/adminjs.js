@@ -26,6 +26,7 @@ $(document).ready(function(){
             $('#secondselect').append('<option selected="selected" value="All">All</option>');
             $('#secondselect').append('<option value="Search Training Tittle">Search Training Tittle</option>');
             $('#secondselect').append('<option value="Level">Level</option>');
+            $('#secondselect').append('<option value="District">District</option>');
         }
         if (selectedselection == 'Trainings Needed'){
             $("#secondselect").hide();
@@ -158,6 +159,21 @@ $(document).ready(function(){
             $('#tirdselect').append('<option value="Major">Major</option>');
             $('#tirdselect').append('<option value="Masteral">Masteral</option>');
             $('#tirdselect').append('<option value="Doctoral">Doctoral</option>');
+        }
+        if(selectedsecond == 'District' && $("#selection").val() == 'Training'){
+            $("#tirdselect").empty();
+            $("#tirdselect").show();
+            $('#tirdselect').append('<option selected="selected" value="Aguinaldo">Aguinaldo</option>');
+            $('#tirdselect').append('<option value="Alfonso Lista">Alfonso Lista</option>');
+            $('#tirdselect').append('<option value="Asipulo">Asipulo</option>');
+            $('#tirdselect').append('<option value="Banaue">Banaue</option>');
+            $('#tirdselect').append('<option value="Hingyon">Hingyon</option>');
+            $('#tirdselect').append('<option value="Hungduan">Hungduan</option>');
+            $('#tirdselect').append('<option value="Kiangan">Kiangan</option>');
+            $('#tirdselect').append('<option value="Lagawe">Lagawe</option>');
+            $('#tirdselect').append('<option value="Lamut">Lamut</option>');
+            $('#tirdselect').append('<option value="Mayoyao">Mayoyao</option>');
+            $('#tirdselect').append('<option value="Tinoc">Tinoc</option>');
         }
         if(selectedsecond == 'Subject'){
             $("#tirdselect").empty();

@@ -36,6 +36,7 @@ function insertude(){
                   "<td align='center' style='white-space: nowrap;'>" + response[i].catgory + "</td>" +
                   "<td align='center' style='white-space: nowrap;'>" + response[i].dateofemp + "</td>" +
                   "<td align='center' style='white-space: nowrap;'>" + response[i].servislent + "</td>" +
+                  "<td align='center' style='white-space: nowrap;'>" + response[i].traintit + "</td>" +
                   "</tr>";
               $("#selectiontbl tbody").append(tr_str);
           } 
