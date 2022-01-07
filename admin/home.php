@@ -31,6 +31,15 @@ if (isset($_GET['logout'])) {
 .reporttbl tr td{
 	border: black solid 1px;
 }
+.heder {
+	margin-top: 50px;
+	background-color: lightpink;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-decoration: none !important;
+}
 
 	</style>
 </head>
@@ -50,8 +59,10 @@ if (isset($_GET['logout'])) {
 						<table style="width: 100%;">
 							<tr>
 								<td>
-						<div style="text-align: left;">
-						<a href="../singlesearch.php"> Single Search</a>
+						<div style="text-align: left; margin-top: 10px;">
+						<a href="../singlesearch.php" class="heder"> Single Search</a>
+						<a href="../Proposalfront.php" class="heder"> Proposalsals</a>
+						<a href="../textmessfront.php" class="heder"> Text Message</a>
 						</div></td>
 						<td>
 							<div style="text-align: right;">

@@ -41,7 +41,7 @@ $sql = "INSERT INTO teachers (`lname`, `fname`, `mname`, `address`,`birthdate`,`
 elseif($varval == 2){
     $sql = "update teachers set lname='$surnam',fname='$firstnam',mname='$midnam',address='$address',
     birthdate='$bdate',age='$age',birthplace='$bplace',cp='$cp',emailadd='$email',gender='$gender',
-    civilstatus='$citizen',namofschool='$schoolnm',addressofschool='$scooladd',district='$ditrik',
+    civilstatus='$csatatus',namofschool='$schoolnm',addressofschool='$scooladd',district='$ditrik',
     Position='$position',category='$categ',employdate='$empdate',servicelength='$lentser' where techer_id = '$varid'";
     if(mysqli_query($link, $sql)){
         $upok = 1;

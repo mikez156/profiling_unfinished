@@ -199,17 +199,17 @@ table{
             <tr>
                 <td>GENDER</td>
                 <td><select id="gender">
-                    <option value="MALE">MALE</option>
-                    <option value="FEMALE">FEMALE</option>
-                    <option value="LGBT">LGBT</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="lgbt">Lgbt</option>
                 </select>
                 </td>
                 <td>Civil Status</td>
                 <td><select id="cstatus">
-                    <option value="SINGLE">SINGLE</option>
-                    <option value="MARRIED">MARRIED</option>
-                    <option value="SEPARATED">SEPARATED</option>
-                    <option value="WIDOWED">WIDOWED</option>
+                    <option value="Single">SINGLE</option>
+                    <option value="Married">MARRIED</option>
+                    <option value="Separated">SEPARATED</option>
+                    <option value="Widowed">WIDOWED</option>
                 </select>
                 </td>
             </tr>
@@ -360,6 +360,7 @@ table{
                     <tr>
                         <th>Delete</th>
                         <th>ID</th>
+                        <th>Level</th>
                         <th>Title of training</th>
                         <th>inclusive Dates</th>
                         <th>Conducted/Sponsored By</th>

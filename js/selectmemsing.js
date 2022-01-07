@@ -10,7 +10,29 @@ $(document).ready(function(){
         
          //  searchloanbal();
        });
+       
 });
+function serjtechfortext(){
+     
+    $.ajax({
+        url: "membersrjsingle.php",
+        cache: false,
+        dataType: "json",
+        type: "post",
+        data:{srchtxt: $("#serjnametxt").val(),sit:1},
+            success: function (result) {
+            //   alert(result.techerid);
+            // $("#surname").html(result.lname);
+            // $("#firstname").text(result.fname);
+            // $("#midname").html(result.mname);
+            
+            // $("#contac").html(result.cp);
+            $("#listnumber tbody").append("<tr><td>"+result.lname+" "+result.fname+"</td><td>"+result.cp+"</td><td><button type='submit' id='delbtn' class='btn btn-primary btn-sm'>Remove</button></td></tr>");
+        }
+        
+    });
+  
+   }
 function serjtech(){
      
     $.ajax({

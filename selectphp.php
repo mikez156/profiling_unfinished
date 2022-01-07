@@ -148,41 +148,7 @@ if($selectioncmb == 'Training' && $secndsch == "All"){
                        echo "No records matching your query were found.";
                    }
 }      
-if($selectioncmb == 'Training' && $secndsch == "Search Training Tittle"){
-    $qry = "select * from teachers b inner join trainings c on b.techer_id = c.techer_id where replace(c.trainingtitle,' ','') like replace('%$serchtxt%',' ','')";
-                   if($result = mysqli_query($link, $qry)){
-                   if(mysqli_num_rows($result) > 0){
-                       while($row = mysqli_fetch_array($result)){
-                           $fill1[] = array(
-                               'tid'  => $row["techer_id"],
-                               'last' => $row["lname"],
-                               'fist' => $row["fname"],
-                               'mid'  => $row["mname"],
-                               'addwes' => $row["address"],
-                               'bdate' => $row["birthdate"],
-                               'age'  => $row["age"],
-                               'bplace'   => $row["birthplace"],
-                               'cnum' => $row["cp"],
-                               'emeladd' => $row["emailadd"],
-                               'sex'      => $row["gender"],
-                               'csttatus'    => $row["civilstatus"],
-                               'sistisen'   => $row["citizenship"],
-                               'skulneym' => $row["namofschool"],
-                               'addofschool' => $row["addressofschool"],
-                               'distrik'      => $row["district"],
-                               'postion'    => $row["Position"],
-                               'catgory'   => $row["category"],
-                               'dateofemp' => $row["employdate"],
-                               'servislent' => $row["servicelength"]
-
-                                );
-                       }
-                        echo json_encode($fill1);   
-                   }
-                   } else{
-                       echo "No records matching your query were found.";
-                   }
-}      
+     
 if($selectioncmb == 'Training' && $secndsch == "Level"){
     $qry = "select * from teachers b inner join trainings c on b.techer_id = c.techer_id where c.level = '$tirdcmd'";
                    if($result = mysqli_query($link, $qry)){
@@ -223,29 +189,7 @@ if($selectioncmb == 'Training' && $secndsch == "District"){
                    if($result = mysqli_query($link, $qry)){
                    if(mysqli_num_rows($result) > 0){
                        while($row = mysqli_fetch_array($result)){
-                           $fill1[] = array(
-                               'tid'  => $row["techer_id"],
-                               'last' => $row["lname"],
-                               'fist' => $row["fname"],
-                               'mid'  => $row["mname"],
-                               'addwes' => $row["address"],
-                               'bdate' => $row["birthdate"],
-                               'age'  => $row["age"],
-                               'bplace'   => $row["birthplace"],
-                               'cnum' => $row["cp"],
-                               'emeladd' => $row["emailadd"],
-                               'sex'      => $row["gender"],
-                               'csttatus'    => $row["civilstatus"],
-                               'sistisen'   => $row["citizenship"],
-                               'skulneym' => $row["namofschool"],
-                               'addofschool' => $row["addressofschool"],
-                               'distrik'      => $row["district"],
-                               'postion'    => $row["Position"],
-                               'catgory'   => $row["category"],
-                               'dateofemp' => $row["employdate"],
-                               'servislent' => $row["servicelength"],
-                               'traintit' => $row["trainingtitle"],
-                                );
+                           $fill1[] = $row;
                        }
                         echo json_encode($fill1);   
                    }
@@ -253,6 +197,32 @@ if($selectioncmb == 'Training' && $secndsch == "District"){
                        echo "No records matching your query were found.";
                    }
 }    
+if($selectioncmb == 'Training' && $secndsch == "Search Training Tittle" && $tirdcmd == "All"){
+    $qry = "select b.techer_id,b.lname,b.fname,b.mname,b.address,b.birthdate,b.age,b.birthplace,b.cp,b.emailadd,b.gender,b.civilstatus,b.citizenship,b.namofschool,b.addressofschool,b.district,b.Position,b.category,b.employdate,b.servicelength,c.trainingtitle from teachers b inner join trainings c on b.techer_id = c.techer_id where replace(c.trainingtitle,' ','') like replace('%$serchtxt%',' ','')";
+                   if($result = mysqli_query($link, $qry)){
+                   if(mysqli_num_rows($result) > 0){
+                       while($row = mysqli_fetch_array($result)){
+                           $fill1[] = $row;
+                       }
+                        echo json_encode($fill1);   
+                   }
+                   } else{
+                       echo "No records matching your query were found.";
+                   }
+}
+if($selectioncmb == 'Training' && $secndsch == "Search Training Tittle" && $tirdcmd != "All"){
+    $qry = "select b.techer_id,b.lname,b.fname,b.mname,b.address,b.birthdate,b.age,b.birthplace,b.cp,b.emailadd,b.gender,b.civilstatus,b.citizenship,b.namofschool,b.addressofschool,b.district,b.Position,b.category,b.employdate,b.servicelength,c.trainingtitle from teachers b inner join trainings c on b.techer_id = c.techer_id where replace(c.trainingtitle,' ','') like replace('%$serchtxt%',' ','') and district ='$tirdcmd'";
+                   if($result = mysqli_query($link, $qry)){
+                   if(mysqli_num_rows($result) > 0){
+                       while($row = mysqli_fetch_array($result)){
+                           $fill1[] = $row;
+                       }
+                        echo json_encode($fill1);   
+                   }
+                   } else{
+                       echo "No records matching your query were found.";
+                   }
+}      
 if($selectioncmb == 'Trainings Needed'){
     $qry = "select * from teachers b inner join training_needed c on b.techer_id = c.techer_id where replace(c.tittleoftraining,' ','') like replace('%$serchtxt%',' ','')";
                    if($result = mysqli_query($link, $qry)){

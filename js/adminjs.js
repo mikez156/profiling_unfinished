@@ -15,7 +15,7 @@ $(document).ready(function(){
             $("#secondselect").empty();
             $("#tirdselect").show();
             $("#tirdselect").empty();
-            $('#secondselect').append('<option selected="selected" value="Civil Status">Civil Status</option>');
+            $('#secondselect').append('<option selected="selected" value="Gender">Gender</option>');
             $('#secondselect').append('<option value="Email Add">Email Add.</option>');
         }
         if (selectedselection == 'Training'){
@@ -204,7 +204,19 @@ $(document).ready(function(){
         }
         if(selectedsecond == 'Search Training Tittle' && $("#selection").val() == 'Training'){
             $("#tirdselect").empty();
-            $("#tirdselect").hide();
+            $("#tirdselect").show();
+            $('#tirdselect').append('<option selected="selected" value="All">All</option>');
+            $('#tirdselect').append('<option value="Aguinaldo">Aguinaldo</option>');
+            $('#tirdselect').append('<option value="Alfonso Lista">Alfonso Lista</option>');
+            $('#tirdselect').append('<option value="Asipulo">Asipulo</option>');
+            $('#tirdselect').append('<option value="Banaue">Banaue</option>');
+            $('#tirdselect').append('<option value="Hingyon">Hingyon</option>');
+            $('#tirdselect').append('<option value="Hungduan">Hungduan</option>');
+            $('#tirdselect').append('<option value="Kiangan">Kiangan</option>');
+            $('#tirdselect').append('<option value="Lagawe">Lagawe</option>');
+            $('#tirdselect').append('<option value="Lamut">Lamut</option>');
+            $('#tirdselect').append('<option value="Mayoyao">Mayoyao</option>');
+            $('#tirdselect').append('<option value="Tinoc">Tinoc</option>');
         }
 
     });

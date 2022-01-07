@@ -6,13 +6,7 @@ var awarddelid = 0;
 var trnneededid = 0;
 $(document).ready(function(){
     $(document).on("click", "#searchbtn", function(){
-        $.when( searchtejer() ).done(function() {
-            serjedu();
-            srchtrng();
-            serjschlr();
-            serjawrds();
-            serjneddedtrn();
-        });
+        searchtejer();
     });
 
  $(document).on("click", "#uptsvmembtn", function(){
@@ -141,18 +135,25 @@ function searchtejer(){
           $("#conttxt").val(result.cnum);
           $("#emailtxt").val(result.emeladd);
           $("#gender").val(result.sex).change();
-          $("#cstatus").val(result.csttatus);
+          $("#cstatus").val(result.csttatus).change();
           $("#cititxt").val(result.sistisen);
           $("#nameofschool").val(result.skulneym);
           $("#scoolid").val(result.addofschool);
           $("#distrct").val(result.distrik);
           $("#position").val(result.postion);
-          $("#gender").val(result.catgory);
+          $("#category").val(result.catgory);
           $("#empdate").val(result.dateofemp);
           $("#lentin").val(result.servislent); 
   
          // namemem.innerText = result.lastname+ ' ' +result.firstname+' '+result.midn+' #'+result.account;
       },
+      complete: function(){
+        serjedu();
+        srchtrng();
+        serjschlr();
+        serjawrds();
+        serjneddedtrn();
+      }
       
     });
   }
@@ -436,7 +437,7 @@ function srchtrng(){
                 $("#inid").prop('value', dataResult);
                   $("#cont_shwhide").show();
                   $("#svmembtn").prop('value', 'Update');
-                  
+                  alert('Successfuly Updated');
              }    
  
          });

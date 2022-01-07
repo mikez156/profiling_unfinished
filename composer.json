@@ -1,0 +1,6 @@
+{
+    "require": {
+        "messagebird/php-rest-api": "^2.1",
+        "twilio/sdk": "^6.32"
+    }
+}
